@@ -13,6 +13,7 @@ import {
   modalVariants,
   authPageFadeInVariants,
 } from '../../motionUtils';
+import './auth.scss';
 
 const Auth = () => {
   const [isSignedUp, setIsSignedUp] = useState(true);
@@ -32,7 +33,7 @@ const Auth = () => {
         style={{ backgroundImage: `url(${SIGNIN_BGIMG_URL})` }}
       />
       <Link to="/" className="Auth__logo">
-        <img src={LOGO_URL} alt="ruckFlix_logo" className="Auth__logo--img" />
+        <img className="Auth__logo--img" src={LOGO_URL} alt="Fakeflix_logo" />
       </Link>
       <motion.div
         className="Auth__content"
@@ -71,16 +72,16 @@ const Auth = () => {
             </motion.p>
           )}
           <motion.hr
-            className="Auth__content--divider"
             variants={authFadeInUpVariants}
+            className="Auth__content--divider"
           />
           <motion.small
             variants={authFadeInUpVariants}
             className="Auth__content--toggleView"
           >
             {isSignedUp
-              ? `Haven't you registered yet?`
-              : 'Do you already have an account?'}
+              ? `Haven't you registered yet? `
+              : 'Do you already have an account? '}
             <span
               className="toggler"
               onClick={() => setIsSignedUp(!isSignedUp)}
