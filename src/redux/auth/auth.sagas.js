@@ -13,7 +13,7 @@ import {
   signOutSuccess,
   signUpSuccess,
   signUpFailure,
-} from './auth,actions';
+} from './auth.actions';
 
 export function* getSnapshotFromUserAuth(userAuth, additionalData) {
   try {
